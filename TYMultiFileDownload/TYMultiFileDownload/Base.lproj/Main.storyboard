@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7KL-mY-vXM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="NHu-BJ-xyB">
+            <objects>
+                <tableViewController id="7KL-mY-vXM" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="zzu-pb-dpQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" rowHeight="68" id="FAq-gI-ZmL" customClass="BookCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAq-gI-ZmL" id="Ez5-Hv-I10">
+                                    <frame key="frameInset" width="375" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcm-DP-Kfh">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RqR-dX-Ra2"/>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="RqR-dX-Ra2" firstAttribute="top" secondItem="Wcm-DP-Kfh" secondAttribute="bottom" constant="15" id="9RF-Gf-bKl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Wcm-DP-Kfh" secondAttribute="trailing" id="EKG-A3-Uof"/>
+                                        <constraint firstAttribute="bottom" secondItem="RqR-dX-Ra2" secondAttribute="bottom" constant="13" id="Iqc-Ad-FsH"/>
+                                        <constraint firstItem="RqR-dX-Ra2" firstAttribute="leading" secondItem="Ez5-Hv-I10" secondAttribute="leadingMargin" constant="8" id="foS-ER-xFk"/>
+                                        <constraint firstItem="Wcm-DP-Kfh" firstAttribute="top" secondItem="Ez5-Hv-I10" secondAttribute="topMargin" id="gII-od-IQu"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="RqR-dX-Ra2" secondAttribute="trailing" constant="8" id="ldW-x3-R5g"/>
+                                        <constraint firstItem="Wcm-DP-Kfh" firstAttribute="leading" secondItem="Ez5-Hv-I10" secondAttribute="leadingMargin" id="teO-GD-V30"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Wcm-DP-Kfh" id="kYB-Fr-AES"/>
+                                    <outlet property="progressView" destination="RqR-dX-Ra2" id="Mey-IT-tcU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7KL-mY-vXM" id="Gxk-VI-myp"/>
+                            <outlet property="delegate" destination="7KL-mY-vXM" id="6Qu-fw-VCJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAj-aX-CRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
